@@ -121,30 +121,30 @@ Widget buildMenuItems(BuildContext context) => Container(
         children: [
           Column(
             children: [
-              ListTile(
-                leading: const Icon(Icons.calendar_month),
-                title: const Text("Visits"),
-                onTap: () => Get.to(
-                  () => const VisitsScreen(),
-                  binding: VisitsControllerBinding(),
-                ),
-              ),
-              ListTile(
-                leading: const Icon(Icons.business_rounded),
-                title: const Text("Salon"),
-                onTap: () => Get.to(
-                  () => const SalonScreen(),
-                  binding: SalonControllerBinding(),
-                ),
-              ),
-              ListTile(
-                leading: const Icon(Icons.add_home_work_outlined),
-                title: const Text("Deoms"),
-                onTap: () => Get.to(
-                  () => const DemosScreen(),
-                  binding: DemosControllerBinding(),
-                ),
-              ),
+              // ListTile(
+              //   leading: const Icon(Icons.calendar_month),
+              //   title: const Text("Visits"),
+              //   onTap: () => Get.to(
+              //     () => const VisitsScreen(),
+              //     binding: VisitsControllerBinding(),
+              //   ),
+              // ),
+              // ListTile(
+              //   leading: const Icon(Icons.business_rounded),
+              //   title: const Text("Salon"),
+              //   onTap: () => Get.to(
+              //     () => const SalonScreen(),
+              //     binding: SalonControllerBinding(),
+              //   ),
+              // ),
+              // ListTile(
+              //   leading: const Icon(Icons.add_home_work_outlined),
+              //   title: const Text("Deoms"),
+              //   onTap: () => Get.to(
+              //     () => const DemosScreen(),
+              //     binding: DemosControllerBinding(),
+              //   ),
+              // ),
               ListTile(
                 leading: const Icon(Icons.account_tree_rounded),
                 title: const Text("Classification"),
@@ -177,14 +177,14 @@ Widget buildMenuItems(BuildContext context) => Container(
                   binding: TherapistTypeControllerBinding(),
                 ),
               ),
-              ListTile(
-                leading: const Icon(Icons.settings),
-                title: const Text("Setting"),
-                onTap: () => Get.to(
-                  () => const SettingsScreen(),
-                  binding: SettingsControllerBinding(),
-                ),
-              ),
+              // ListTile(
+              //   leading: const Icon(Icons.settings),
+              //   title: const Text("Setting"),
+              //   onTap: () => Get.to(
+              //     () => const SettingsScreen(),
+              //     binding: SettingsControllerBinding(),
+              //   ),
+              // ),
             ],
           ),
           Column(

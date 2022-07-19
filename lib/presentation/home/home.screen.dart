@@ -16,12 +16,12 @@ class HomeScreen extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Obx(
-      //     () => Text("${controller.globals.PageTitle}"),
-      //   ),
-      //   centerTitle: true,
-      // ),
+      appBar: AppBar(
+        title: Obx(
+          () => Text("${controller.globals.PageTitle}"),
+        ),
+        centerTitle: true,
+      ),
       drawer: const NavigationDrawer(),
       body: getBody(),
       bottomNavigationBar: _buildBottomBar(),

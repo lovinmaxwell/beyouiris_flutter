@@ -11,13 +11,13 @@ class DemosScreen extends GetView<DemosController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Obx(
-          () => Text("${controller.globals.PageTitle}"),
-        ),
-        centerTitle: true,
-      ),
-      drawer: const NavigationDrawer(),
+      // appBar: AppBar(
+      //   title: Obx(
+      //     () => Text("${controller.globals.PageTitle}"),
+      //   ),
+      //   centerTitle: true,
+      // ),
+      // drawer: const NavigationDrawer(),
       body: Center(
         child: Text(
           '${controller.PageTitle} is working',

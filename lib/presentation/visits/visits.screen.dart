@@ -9,12 +9,12 @@ class VisitsScreen extends GetView<VisitsController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Obx(
-          () => Text("${controller.globals.PageTitle}"),
-        ),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   title: Obx(
+      //     () => Text("${controller.globals.PageTitle}"),
+      //   ),
+      //   centerTitle: true,
+      // ),
       body: Center(
         child: Text(
           '${controller.PageTitle} is working',
