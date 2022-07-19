@@ -1,9 +1,9 @@
+import 'package:beyou/domain/core/base/base.controller.dart';
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
+class HomeController extends BaseController {
   //TODO: Implement HomeController
   var tabIndex = 0.obs;
-
   // void changedTabIndex(int index) {
   //   tabIndex = index;
   //   update();

@@ -1,3 +1,4 @@
+import 'package:beyou/infrastructure/navigation/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -10,12 +11,15 @@ class SettingsScreen extends GetView<SettingsController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SettingsScreen'),
+        title: Obx(
+          () => Text("${controller.globals.PageTitle}"),
+        ),
         centerTitle: true,
       ),
+      drawer: const NavigationDrawer(),
       body: Center(
         child: Text(
-          'SettingsScreen is working',
+          '${controller.PageTitle} is working',
           style: TextStyle(fontSize: 20),
         ),
       ),

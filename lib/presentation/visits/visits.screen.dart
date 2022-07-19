@@ -10,12 +10,14 @@ class VisitsScreen extends GetView<VisitsController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('VisitsScreen'),
+        title: Obx(
+          () => Text("${controller.globals.PageTitle}"),
+        ),
         centerTitle: true,
       ),
       body: Center(
         child: Text(
-          'VisitsScreen is working',
+          '${controller.PageTitle} is working',
           style: TextStyle(fontSize: 20),
         ),
       ),

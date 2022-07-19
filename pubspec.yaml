@@ -9,14 +9,41 @@ dependencies:
   cupertino_icons: ^1.0.2
   get_cli: ^1.8.1
   get: 4.6.5
+  flutter_svg: ^1.1.1+1
+  connectivity_plus: ^2.3.6
+  cached_network_image: ^3.2.1
+  google_fonts: ^3.0.1
+  get_storage: ^2.0.3
+  badges: ^2.0.3
+  flutter_easyloading: ^3.0.5
+  skeleton_text: ^3.0.0
+  flutter_launcher_icons: ^0.9.3
+  fluttertoast: ^8.0.9
+  device_info_plus: ^3.2.3
+  package_info_plus: ^1.4.2
+  # package_info_plus_windows: ^1.0.5
+  share_plus: ^4.0.10
+  flutter_speed_dial: ^6.0.0
+  jiffy: ^5.0.0
+  json_annotation: ^4.6.0
   flutter: 
     sdk: flutter
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
+  build_runner: ^2.2.0
+  json_serializable: ^6.3.1
   flutter_test: 
     sdk: flutter
 
 flutter: 
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/
+
+flutter_icons:
+  image_path: "assets/images/beyouiris.png"
+  android: true
+  ios: true
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../infrastructure/navigation/navigation_drawer.dart';
 import 'controllers/salon.controller.dart';
 
 class SalonScreen extends GetView<SalonController> {
@@ -10,13 +11,16 @@ class SalonScreen extends GetView<SalonController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SalonScreen'),
+        title: Obx(
+          () => Text("${controller.globals.PageTitle}"),
+        ),
         centerTitle: true,
       ),
+      drawer: const NavigationDrawer(),
       body: Center(
         child: Text(
-          'SalonScreen is working',
-          style: TextStyle(fontSize: 20),
+          '${controller.PageTitle} is working',
+          style: const TextStyle(fontSize: 20),
         ),
       ),
     );

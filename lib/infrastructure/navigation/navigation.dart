@@ -66,5 +66,25 @@ class Nav {
       page: () => const SettingsScreen(),
       binding: SettingsControllerBinding(),
     ),
+    GetPage(
+      name: Routes.DEMOS,
+      page: () => const DemosScreen(),
+      binding: DemosControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.THERAPISTS,
+      page: () => const TherapistsScreen(),
+      binding: TherapistsControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.THERAPIST_TYPE,
+      page: () => const TherapistTypeScreen(),
+      binding: TherapistTypeControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.SYSTEM_INFO,
+      page: () => const SystemInfoScreen(),
+      binding: SystemInfoControllerBinding(),
+    ),
   ];
 }

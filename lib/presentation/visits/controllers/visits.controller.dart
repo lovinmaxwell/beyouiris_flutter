@@ -1,8 +1,11 @@
 import 'package:get/get.dart';
 
-class VisitsController extends GetxController {
-  //TODO: Implement VisitsController
+import '../../../domain/core/base/base.controller.dart';
+import '../../home/controllers/home.controller.dart';
 
+class VisitsController extends BaseController {
+  //TODO: Implement VisitsController
+  final PageTitle = "Visits";
   final count = 0.obs;
   @override
   void onInit() {

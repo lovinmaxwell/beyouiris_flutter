@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import '../../infrastructure/navigation/custom_animated_bottom_bar.dart';
 import '../../infrastructure/navigation/navigation.dart';
+import '../../infrastructure/navigation/navigation_drawer.dart';
 import '../../infrastructure/navigation/routes.dart';
 import 'controllers/home.controller.dart';
 
@@ -15,6 +16,13 @@ class HomeScreen extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   title: Obx(
+      //     () => Text("${controller.globals.PageTitle}"),
+      //   ),
+      //   centerTitle: true,
+      // ),
+      drawer: const NavigationDrawer(),
       body: getBody(),
       bottomNavigationBar: _buildBottomBar(),
     );
@@ -30,26 +38,43 @@ class HomeScreen extends GetView<HomeController> {
           itemCornerRadius: 24,
           curve: Curves.easeIn,
           // onItemSelected: (index) => setState(() => _currentIndex = index),
-          onItemSelected: (index) => controller.tabIndex.value = index,
+          onItemSelected: (index) {
+            controller.tabIndex.value = index;
+            switch (index) {
+              case 0:
+                controller.globals.PageTitle.value = "Visits";
+                break;
+              case 1:
+                controller.globals.PageTitle.value = "Salons";
+                break;
+              case 2:
+                controller.globals.PageTitle.value = "Demos";
+                break;
+              case 3:
+                controller.globals.PageTitle.value = "Setting";
+                break;
+              default:
+            }
+          },
           items: <BottomNavyBarItem>[
             BottomNavyBarItem(
-              icon: const Icon(Icons.apps),
-              title: const Text('Home'),
+              icon: const Icon(Icons.calendar_month),
+              title: const Text('Visits'),
               activeColor: Colors.green,
               inactiveColor: _inactiveColor,
               textAlign: TextAlign.center,
             ),
             BottomNavyBarItem(
-              icon: const Icon(Icons.people),
-              title: const Text('Users'),
+              icon: const Icon(Icons.business_rounded),
+              title: const Text('Salons'),
               activeColor: Colors.purpleAccent,
               inactiveColor: _inactiveColor,
               textAlign: TextAlign.center,
             ),
             BottomNavyBarItem(
-              icon: const Icon(Icons.message),
+              icon: const Icon(Icons.add_home_work_outlined),
               title: const Text(
-                'Messages ',
+                'Demos ',
               ),
               activeColor: Colors.pink,
               inactiveColor: _inactiveColor,
@@ -70,7 +95,7 @@ class HomeScreen extends GetView<HomeController> {
     List<Widget> pages = [
       const VisitsScreen(),
       const SalonScreen(),
-      const SalonClassificationScreen(),
+      const DemosScreen(),
       const SettingsScreen(),
     ];
     return Obx(() => IndexedStack(
