@@ -1,8 +1,13 @@
+import 'package:beyou/domain/base/base.controller.dart';
+import 'package:beyou/domain/base/local.storage.dart';
 import 'package:beyou/infrastructure/navigation/bindings/controllers/controllers_bindings.dart';
 import 'package:beyou/presentation/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+
+import '../../config.dart';
+import '../../domain/base/base.service.dart';
 
 // final deviceInfoPlugin = DeviceInfoPlugin();
 // final deviceInfo = await deviceInfoPlugin.deviceInfo;
@@ -32,6 +37,8 @@ class BuildMenuHeader extends StatefulWidget {
 }
 
 class _BuildMenuHeaderState extends State<BuildMenuHeader> {
+  final BaseService baseServices = Get.find<BaseService>();
+  final store = Get.find<LocalStorage>();
   PackageInfo _packageInfo = PackageInfo(
     appName: 'Unknown',
     packageName: 'Unknown',
@@ -78,13 +85,13 @@ class _BuildMenuHeaderState extends State<BuildMenuHeader> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Image(
+            children: const [
+              Image(
                 image: AssetImage('assets/images/beyouiris-trans.png'),
                 width: 100,
                 height: 100,
               ),
-              const Text("Be You Iris"),
+              Text("$appTitle"),
             ],
           ),
           Column(
@@ -92,10 +99,10 @@ class _BuildMenuHeaderState extends State<BuildMenuHeader> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => baseServices.logout(),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
                       Text("Logout"),
                       SizedBox(width: 10),
                       Icon(Icons.logout),
@@ -103,7 +110,12 @@ class _BuildMenuHeaderState extends State<BuildMenuHeader> {
                   )),
               // _infoTile('App Name', _packageInfo.appName),
               // _infoTile('Package Name', _packageInfo.packageName),
-              _infoTile('App Version', _packageInfo.version),
+              Column(
+                children: [
+                  _infoTile('User', store.appSetting.user_name ?? "-"),
+                  _infoTile('App Version', _packageInfo.version),
+                ],
+              ),
               // _infoTile('Build number', _packageInfo.buildNumber),
               // _infoTile('Build signature', _packageInfo.buildSignature),
             ],

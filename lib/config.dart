@@ -5,20 +5,24 @@ class Environments {
   static const String LOCAL = 'local';
 }
 
+const String appTitle = 'Be You Iries';
+
+String get getStorageConfig => 'config';
+
 class ConfigEnvironments {
   static const String _currentEnvironments = Environments.LOCAL;
   static final List<Map<String, String>> _availableEnvironments = [
     {
       'env': Environments.LOCAL,
-      'url': 'http://localhost:8080/api/',
+      'url': 'https://beyou.demo.1.oryxsolutions.qa',
     },
     {
       'env': Environments.DEV,
-      'url': '',
+      'url': 'https://beyou.demo.1.oryxsolutions.qa',
     },
     {
       'env': Environments.QAS,
-      'url': '',
+      'url': 'https://beyou.demo.1.oryxsolutions.qa',
     },
     {
       'env': Environments.PRODUCTION,

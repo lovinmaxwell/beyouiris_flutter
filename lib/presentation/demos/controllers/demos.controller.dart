@@ -1,6 +1,6 @@
-import 'package:beyou/domain/core/base/base.controller.dart';
 import 'package:get/get.dart';
 
+import '../../../domain/base/base.controller.dart';
 import '../../home/controllers/home.controller.dart';
 
 class DemosController extends BaseController {

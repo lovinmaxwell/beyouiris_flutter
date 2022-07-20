@@ -1,7 +1,6 @@
-import 'package:beyou/presentation/home/controllers/home.controller.dart';
 import 'package:get/get.dart';
 
-import '../../../domain/core/base/base.controller.dart';
+import '../../../domain/base/base.controller.dart';
 
 class SettingsController extends BaseController {
   //TODO: Implement SettingsController

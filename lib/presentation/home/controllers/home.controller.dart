@@ -1,5 +1,6 @@
-import 'package:beyou/domain/core/base/base.controller.dart';
 import 'package:get/get.dart';
+
+import '../../../domain/base/base.controller.dart';
 
 class HomeController extends BaseController {
   //TODO: Implement HomeController
@@ -25,5 +26,5 @@ class HomeController extends BaseController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+
 }

@@ -1,8 +1,12 @@
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 
+import '../../../config.dart';
+
 class AppGlobal extends GetxController {
   RxString PageTitle = "Home".obs;
+  RxBool isLoggedIn = false.obs;
+  String baseURL = '';
 
   @override
   void onInit() {
@@ -21,5 +25,6 @@ class AppGlobal extends GetxController {
     //   ..dismissOnTap = false;
 
     super.onInit();
+    baseURL = ConfigEnvironments.getEnvironments().entries.last.value;
   }
 }

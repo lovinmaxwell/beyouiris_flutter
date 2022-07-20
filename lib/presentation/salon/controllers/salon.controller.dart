@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../../../domain/core/base/base.controller.dart';
+import '../../../domain/base/base.controller.dart';
 import '../../home/controllers/home.controller.dart';
 
 class SalonController extends BaseController {
